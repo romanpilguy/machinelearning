@@ -63,7 +63,7 @@ Epoch 15/15
 93600/93600 [==============================] - 143s 2ms/step - loss: 0.0726 - acc: 0.9702 - val_loss: 0.3436 - val_acc: 0.9204
 Test loss: 0.34356227772925285
 Test accuracy: 0.920352564102564</pre>
-![Иллюстрация к проекту](https://github.com/romanpilguy/machinelearning/raw/master/graphics/perc1.png)
+![](https://github.com/romanpilguy/machinelearning/raw/master/graphics/perc1.png)
 <h3>Вторая попытка</h3>
 Оптимизация методом градиентного спуска
 batch_size = 128, epochs = 25,
@@ -142,7 +142,7 @@ Epoch 25/25
 Test loss: 0.44857419048877767
 Test accuracy: 0.9191025641025641
 </pre>
-![Иллюстрация к проекту](https://github.com/romanpilguy/machinelearning/raw/master/graphics/percep2.png))
+![](https://github.com/romanpilguy/machinelearning/raw/master/graphics/percep2.png))
 <h2>Глубокая сверточная сеть</h2>
 <h3>Первоначальная структура</h3>
 <pre>Layer (type)                 Output Shape              Param #   
@@ -207,7 +207,7 @@ Epoch 15/15
 93600/93600 [==============================] - 14s 152us/step - loss: 0.2310 - acc: 0.9253 - val_loss: 0.2130 - val_acc: 0.9339
 Test loss: 0.21300901203535688
 Test accuracy: 0.9338782051282051
-![Иллюстрация к проекту](https://github.com/romanpilguy/machinelearning/raw/master/graphics/cnn1.png)
+![](https://github.com/romanpilguy/machinelearning/raw/master/graphics/cnn1.png)
   </pre>
   <h4>Вторая попытка</h4>
   epochs = 25, batch_size = 128
@@ -292,7 +292,7 @@ Epoch 25/25
 Test loss: 0.44857419048877767
 Test accuracy: 0.9191025641025641
   </pre>
-  ![Иллюстрация к проекту](https://github.com/romanpilguy/machinelearning/raw/master/graphics/cnn2.png)
+  ![](https://github.com/romanpilguy/machinelearning/raw/master/graphics/cnn2.png)
   <h2>Третья попытка</h2>
   Используется оптимизатор adadelta (https://habr.com/ru/post/318970/) ,
   batch_size = 128, epochs = 25,  топология неизменна
@@ -352,5 +352,5 @@ Epoch 25/25
 Test loss: 0.20282957774467575
 Test accuracy: 0.933974358974359
   </pre>
-  ![Иллюстрация к проекту](https://github.com/romanpilguy/machinelearning/raw/master/graphics/cnn3.png)
+  ![](https://github.com/romanpilguy/machinelearning/raw/master/graphics/cnn3.png)
   
