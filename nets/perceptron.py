@@ -53,11 +53,11 @@ num_classes = 26
 x_train = x_train.astype('float32')
 x_test = x_test.astype('float32')
 
-# Rescale the image values to [0, 1]
+
 x_train /= 255
 x_test /= 255
 
-# Convert class vectors to binary class matrices
+
 y_train = keras.utils.to_categorical(y_train, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
 
@@ -76,24 +76,19 @@ model.add(Dense(2000, activation='relu'))
 model.add(Dense(num_classes, activation='softmax'))
 
 
-# Comple the model
 model.compile(loss=keras.losses.categorical_crossentropy,
               optimizer=keras.optimizers.Adadelta(),
               metrics=['accuracy'])
 
-# Model variables
 
-
-# Train the model
 history = model.fit(x_train, y_train,
           batch_size=batch_size,
           epochs=epochs,
           verbose=1,
           validation_data=(x_test, y_test))
-# Save the model weights for future reference
-model.save('emnist_cnn_model.h5')
 
-# Evaluate the model using Accuracy and Loss
+
+
 score = model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
