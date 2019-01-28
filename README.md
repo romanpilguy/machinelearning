@@ -63,6 +63,7 @@ Epoch 15/15
 93600/93600 [==============================] - 143s 2ms/step - loss: 0.0726 - acc: 0.9702 - val_loss: 0.3436 - val_acc: 0.9204
 Test loss: 0.34356227772925285
 Test accuracy: 0.920352564102564</pre>
+![Иллюстрация к проекту](https://github.com/romanpilguy/machinelearning/raw/master/graphics/perc1.png)
 <h3>Вторая попытка</h3>
 Оптимизация методом градиентного спуска
 batch_size = 128, epochs = 25,
@@ -141,6 +142,7 @@ Epoch 25/25
 Test loss: 0.44857419048877767
 Test accuracy: 0.9191025641025641
 </pre>
+![Иллюстрация к проекту](https://github.com/romanpilguy/machinelearning/raw/master/graphics/percep2.png))
 <h2>Глубокая сверточная сеть</h2>
 <h3>Первоначальная структура</h3>
 <pre>Layer (type)                 Output Shape              Param #   
@@ -205,6 +207,7 @@ Epoch 15/15
 93600/93600 [==============================] - 14s 152us/step - loss: 0.2310 - acc: 0.9253 - val_loss: 0.2130 - val_acc: 0.9339
 Test loss: 0.21300901203535688
 Test accuracy: 0.9338782051282051
+![Иллюстрация к проекту](https://github.com/romanpilguy/machinelearning/raw/master/graphics/cnn1.png)
   </pre>
   <h4>Вторая попытка</h4>
   epochs = 25, batch_size = 128
@@ -289,4 +292,65 @@ Epoch 25/25
 Test loss: 0.44857419048877767
 Test accuracy: 0.9191025641025641
   </pre>
+  ![Иллюстрация к проекту](https://github.com/romanpilguy/machinelearning/raw/master/graphics/cnn2.png)
+  <h2>Третья попытка</h2>
+  Используется оптимизатор adadelta (https://habr.com/ru/post/318970/) ,
+  batch_size = 128, epochs = 25,  топология неизменна
+  <h4>Логи:</h4>
+  <pre>
+  Train on 93600 samples, validate on 31200 samples
+Epoch 1/25
+93600/93600 [==============================] - 41s 438us/step - loss: 1.2416 - acc: 0.6258 - val_loss: 0.4907 - val_acc: 0.8493
+Epoch 2/25
+93600/93600 [==============================] - 40s 426us/step - loss: 0.6312 - acc: 0.8022 - val_loss: 0.3568 - val_acc: 0.8841
+Epoch 3/25
+93600/93600 [==============================] - 40s 428us/step - loss: 0.5060 - acc: 0.8397 - val_loss: 0.2976 - val_acc: 0.9042
+Epoch 4/25
+93600/93600 [==============================] - 40s 430us/step - loss: 0.4418 - acc: 0.8593 - val_loss: 0.2784 - val_acc: 0.9101
+Epoch 5/25
+93600/93600 [==============================] - 40s 422us/step - loss: 0.4081 - acc: 0.8686 - val_loss: 0.2690 - val_acc: 0.9115
+Epoch 6/25
+93600/93600 [==============================] - 40s 427us/step - loss: 0.3725 - acc: 0.8789 - val_loss: 0.2537 - val_acc: 0.9167
+Epoch 7/25
+93600/93600 [==============================] - 41s 434us/step - loss: 0.3501 - acc: 0.8861 - val_loss: 0.2416 - val_acc: 0.9213
+Epoch 8/25
+93600/93600 [==============================] - 40s 427us/step - loss: 0.3325 - acc: 0.8913 - val_loss: 0.2344 - val_acc: 0.9245
+Epoch 9/25
+93600/93600 [==============================] - 40s 423us/step - loss: 0.3157 - acc: 0.8953 - val_loss: 0.2279 - val_acc: 0.9266
+Epoch 10/25
+93600/93600 [==============================] - 40s 432us/step - loss: 0.3036 - acc: 0.8996 - val_loss: 0.2362 - val_acc: 0.9230
+Epoch 11/25
+93600/93600 [==============================] - 40s 428us/step - loss: 0.2874 - acc: 0.9033 - val_loss: 0.2208 - val_acc: 0.9284
+Epoch 12/25
+93600/93600 [==============================] - 40s 424us/step - loss: 0.2792 - acc: 0.9065 - val_loss: 0.2136 - val_acc: 0.9296
+Epoch 13/25
+93600/93600 [==============================] - 41s 435us/step - loss: 0.2708 - acc: 0.9085 - val_loss: 0.2127 - val_acc: 0.9302
+Epoch 14/25
+93600/93600 [==============================] - 40s 423us/step - loss: 0.2629 - acc: 0.9110 - val_loss: 0.2108 - val_acc: 0.9309
+Epoch 15/25
+93600/93600 [==============================] - 40s 426us/step - loss: 0.2557 - acc: 0.9129 - val_loss: 0.2112 - val_acc: 0.9315
+Epoch 16/25
+93600/93600 [==============================] - 41s 433us/step - loss: 0.2456 - acc: 0.9164 - val_loss: 0.2099 - val_acc: 0.9330
+Epoch 17/25
+93600/93600 [==============================] - 40s 430us/step - loss: 0.2432 - acc: 0.9160 - val_loss: 0.2025 - val_acc: 0.9336
+Epoch 18/25
+93600/93600 [==============================] - 40s 430us/step - loss: 0.2328 - acc: 0.9193 - val_loss: 0.2165 - val_acc: 0.9301
+Epoch 19/25
+93600/93600 [==============================] - 40s 429us/step - loss: 0.2290 - acc: 0.9212 - val_loss: 0.2078 - val_acc: 0.9331
+Epoch 20/25
+93600/93600 [==============================] - 40s 429us/step - loss: 0.2246 - acc: 0.9214 - val_loss: 0.2083 - val_acc: 0.9343
+Epoch 21/25
+93600/93600 [==============================] - 40s 427us/step - loss: 0.2164 - acc: 0.9243 - val_loss: 0.2076 - val_acc: 0.9332
+Epoch 22/25
+93600/93600 [==============================] - 40s 426us/step - loss: 0.2142 - acc: 0.9250 - val_loss: 0.2068 - val_acc: 0.9333
+Epoch 23/25
+93600/93600 [==============================] - 41s 435us/step - loss: 0.2101 - acc: 0.9263 - val_loss: 0.2057 - val_acc: 0.9340
+Epoch 24/25
+93600/93600 [==============================] - 40s 427us/step - loss: 0.2043 - acc: 0.9285 - val_loss: 0.2020 - val_acc: 0.9342
+Epoch 25/25
+93600/93600 [==============================] - 40s 425us/step - loss: 0.2038 - acc: 0.9286 - val_loss: 0.2028 - val_acc: 0.9340
+Test loss: 0.20282957774467575
+Test accuracy: 0.933974358974359
+  </pre>
+  ![Иллюстрация к проекту](https://github.com/romanpilguy/machinelearning/raw/master/graphics/cnn3.png)
   
